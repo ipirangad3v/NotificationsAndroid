@@ -84,4 +84,27 @@ object NotificationUtils {
         notificationManager.notify(2, notificationBuilder.build())
 
     }
+
+    fun notificationBigText(context: Context) {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            createNotificationChannel(context)
+        }
+        val bigTextStyle = NotificationCompat
+            .BigTextStyle()
+            .bigText(context.getString(R.string.notif_big_message))
+        val notificationBuilder = NotificationCompat.Builder(context, CHANNEL_ID)
+            .setSmallIcon(R.drawable.ic_favorite)
+            .setContentTitle(context.getString(R.string.notif_title))
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setColor(ActivityCompat.getColor(context, R.color.design_default_color_primary))
+            .setDefaults(Notification.DEFAULT_ALL)
+            .setContentIntent(getContentIntent(context))
+            .setAutoCancel(true)
+            .setStyle(bigTextStyle)
+
+        val notificationManager = NotificationManagerCompat.from(context)
+        notificationManager.notify(3, notificationBuilder.build())
+
+    }
 }

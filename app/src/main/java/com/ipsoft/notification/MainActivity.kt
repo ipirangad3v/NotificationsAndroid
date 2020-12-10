@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity() {
         mainBinding.btnTapAction.setOnClickListener {
             NotificationUtils.notificationWithTapAction(this)
         }
-//        mainBinding.btnBigText.setOnClickListener {
-//            NotificationUtils.notificationBigText(this)
-//        }
+        mainBinding.btnBigText.setOnClickListener {
+            NotificationUtils.notificationBigText(this)
+        }
 //        mainBinding.btnActionButton.setOnClickListener {
 //            NotificationUtils.notificationWithButtonAction(this)
 //        }
