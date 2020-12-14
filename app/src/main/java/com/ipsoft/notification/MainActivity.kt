@@ -23,12 +23,12 @@ class MainActivity : AppCompatActivity() {
         mainBinding.btnBigText.setOnClickListener {
             NotificationUtils.notificationBigText(this)
         }
-//        mainBinding.btnActionButton.setOnClickListener {
-//            NotificationUtils.notificationWithButtonAction(this)
-//        }
-//        mainBinding.btnDirectReply.setOnClickListener {
-//            NotificationUtils.notificationAutoReply(this)
-//        }
+        mainBinding.btnActionButton.setOnClickListener {
+            NotificationUtils.notificationWithButtonAction(this)
+        }
+        mainBinding.btnDirectReply.setOnClickListener {
+            NotificationUtils.notificationAutoReply(this)
+        }
 //        mainBinding.btnInbox.setOnClickListener {
 //            NotificationUtils.notificationInbox(this)
 //        }
